@@ -1,5 +1,17 @@
+@font-face {
+    font-family: 'bookman';
+    src: url(../fonts/Bookman-Bold-Italic.ttf) format("truetype");
+}
+
+body {
+    background-image: url("https://misterrogers.org/wp-content/uploads/2018/07/Around-the-Neighborhood.jpg");
+    background-color: #cccccc;
+    background-size: 1920px 1080px;
+}
+
 h1 {
     text-align: center;
+    font-family: bookman;
 }
 
 .robogersFormStyle {
@@ -8,4 +20,22 @@ h1 {
 
 .robogersOutputStyle {
     text-align: center;
+    padding-top: 30px;
+}
+
+.box {
+    opacity: 80%;
+    padding-top: 50px;
+    text-align: center;
+    height: 300px;
+    width: 500px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.943);
+}
+
+.boxAlign {
+    padding-left: 400px;
+    padding-right: 250px;
+    padding-top: 50px;
 }
