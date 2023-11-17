@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'bookman';
-    src: url(../fonts/Bookman-Bold-Italic.ttf) format("truetype");
+    font-family: 'Rogers';
+    src: url(../fonts/ROGERS.TTF) format("truetype");
 }
 
 body {
@@ -11,7 +11,9 @@ body {
 
 h1 {
     text-align: center;
-    font-family: bookman;
+    font-family: Rogers;
+    font-size: 60px;
+    color: rgb(166, 11, 11)
 }
 
 .robogersFormStyle {
