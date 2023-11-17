@@ -14,6 +14,16 @@ test: it returns true if the number is 1
 code: shouldReturnBeep(1)
 expected output: true
 
-test:
-code:
-expected output:
+test: it replaces the number 1 with the word "beep"
+code: shouldReturnBeep(1)
+expected output: "beep"
+
+test: it replaces the number 1 with beep regardless of placement
+code: shouldReturnBeep(21)
+expected output: "0,beep,2,3,4,5,6,7,8,9,beep,beep,beep,beep,beep,beep,beep,beep,beep,beep,20,beep"
+
+
+<!-- The number 13 should be replaced with "Won't you be my neighbor?"
+The number 12 should be replaced with "Boop!".
+The number 23 should be replaced with "Won't you be my neighbor?"
+The number 21 should be replaced with "Boop!". -->

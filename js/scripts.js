@@ -3,6 +3,7 @@
 document.addEventListener("DOMContentLoaded", (e) => {
     const mrRobogersForm = document.getElementById("mrRobogersForm");
     mrRobogersForm.addEventListener("submit", (e) => {
+        e.preventDefault();
         const userNumberInputValue = document.getElementById("userNumberInput").value;
         const result = numberToConvertedList(userNumberInputValue);
 
@@ -10,7 +11,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
         document.getElementById("mrRobogersForm").reset();
 
-        e.preventDefault();
 
     });
 
@@ -20,17 +20,22 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 function numberToConvertedList(userNum) {
     const convertedNumArray = [];
-    for (let index = 0; index <= userNum; index += 1) {
-        if (shouldReturnBeep(index)) {
+    for (let i = 0; i <= userNum; i += 1) {
+        if (shouldReturnBeep(i)) {
             convertedNumArray.push("beep");
         } else {
-            convertedNumArray.push(index);
+            convertedNumArray.push(i);
         }
     }
     return convertedNumArray;
 }
 
 function shouldReturnBeep(userNum) {
-    return true;
+    let userNumToString = userNum.toString();
+    for (let i = 0; i < userNumToString.length; i++) {
+        if (userNumToString[i] === '1') {
+            return true;
+        }
+    }
+    return false;
 }
-
