@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 function numberToConvertedList(userNum) {
     const convertedNumArray = [];
     for (let index = 0; index <= userNum; index += 1) {
-        convertedNumArray.push();
-        return convertedNumArray;
+        convertedNumArray.push(index);
     }
+    return convertedNumArray;
 }
