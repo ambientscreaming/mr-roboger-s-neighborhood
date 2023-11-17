@@ -19,5 +19,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 // BUSINESS LOGIC 
 
 function numberToConvertedList(userNum) {
-    return userNum;
+    const convertedNumArray = [];
+    for (let index = 0; index <= userNum; index += 1) {
+        convertedNumArray.push();
+        return convertedNumArray;
+    }
 }
