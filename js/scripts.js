@@ -21,13 +21,16 @@ document.addEventListener("DOMContentLoaded", (e) => {
 function numberToConvertedList(userNum) {
     const convertedNumArray = [];
     for (let index = 0; index <= userNum; index += 1) {
-        if shouldReturnBeep
-        convertedNumArray.push(index);
+        if (shouldReturnBeep(index)) {
+            convertedNumArray.push("beep");
+        } else {
+            convertedNumArray.push(index);
+        }
     }
     return convertedNumArray;
 }
 
 function shouldReturnBeep(userNum) {
-    return false;
+    return true;
 }
 
