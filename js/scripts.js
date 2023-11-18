@@ -23,9 +23,12 @@ function numberToConvertedList(userNum) {
     for (let i = 0; i <= userNum; i += 1) {
         if (shouldReturnBeep(i)) {
             convertedNumArray.push("beep");
+        } else if (shouldReturnBoop(i)) {
+            convertedNumArray.push("boop");
         } else {
             convertedNumArray.push(i);
         }
+
     }
     return convertedNumArray;
 }
@@ -38,4 +41,13 @@ function shouldReturnBeep(userNum) {
         }
     }
     return false;
+}
+
+function shouldReturnBoop(userNum) {
+    let userNumToString2 = userNum.toString();
+    for (let i = 0; i < userNumToString2.length; i++) {
+        if (userNumToString2[i] === '2') {
+            return true;
+        }
+    }
 }

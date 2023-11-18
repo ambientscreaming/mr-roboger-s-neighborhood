@@ -22,6 +22,9 @@ test: it replaces the number 1 with beep regardless of placement
 code: shouldReturnBeep(21)
 expected output: "0,beep,2,3,4,5,6,7,8,9,beep,beep,beep,beep,beep,beep,beep,beep,beep,beep,20,beep"
 
+test: it replaces the number 2 with "boop"
+code: shouldReturnBoop(10)
+expected output: "0,beep,boop,3,4,5,6,7,8,9,beep"
 
 <!-- The number 13 should be replaced with "Won't you be my neighbor?"
 The number 12 should be replaced with "Boop!".
