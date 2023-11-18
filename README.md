@@ -8,6 +8,10 @@ test: it displays all of the numbers up to and including the user's inputted num
 code: numberToConvertedList(13);
 expected output: 1,2,3,4,5,6,7,8,9,10,11,12,13
 
+test: it prioritizes replacing the number 3 over the number 1
+code: numberToConvertedList(13)
+expected output: 0,beep,boop,won't you be my neighbor?,4,5,6,7,8,9,beep,beep,boop,won't you be my neighbor?
+
 describe: shouldReturnBeep
 
 test: it returns true if the number is 1
@@ -16,7 +20,7 @@ expected output: true
 
 test: it replaces the number 1 with the word "beep"
 code: shouldReturnBeep(1)
-expected output: "beep"
+expected output: beep
 
 test: it replaces the number 1 with beep regardless of placement
 code: shouldReturnBeep(21)
@@ -26,13 +30,13 @@ describe: shouldReturnBoop
 
 test: it replaces the number 2 with "boop"
 code: shouldReturnBoop(10)
-expected output: "0,beep,boop,3,4,5,6,7,8,9,beep"
+expected output: 0,beep,boop,3,4,5,6,7,8,9,beep
 
 describe: shouldReturnBeMyNeighbor
 
 test: it replaces the number 3 with "won't you be my neighbor?"
 code: shouldReturnBoop(10)
-expected output: "0,beep,boop,won't you be my neighbor,4,5,6,7,8,9,beep"
+expected output: 0,beep,boop,won't you be my neighbor,4,5,6,7,8,9,beep
 
 <!-- The number 13 should be replaced with "Won't you be my neighbor?"
 The number 12 should be replaced with "Boop!".

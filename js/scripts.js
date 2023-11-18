@@ -21,12 +21,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
 function numberToConvertedList(userNum) {
     const convertedNumArray = [];
     for (let i = 0; i <= userNum; i += 1) {
-        if (shouldReturnBeep(i)) {
-            convertedNumArray.push("beep");
+        if (shouldReturnBeMyNeighbor(i)) {
+            convertedNumArray.push("won't you be my neighbor?");
         } else if (shouldReturnBoop(i)) {
             convertedNumArray.push("boop");
-        } else if (shouldReturnBeMyNeighbor(i)) {
-            convertedNumArray.push("won't you be my neighbor?")
+        } else if (shouldReturnBeep(i)) {
+            convertedNumArray.push("beep")
         } else {
             convertedNumArray.push(i);
         }
