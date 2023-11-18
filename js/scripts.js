@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
 function numberToConvertedList(userNum) {
     const convertedNumArray = [];
     for (let i = 0; i <= userNum; i += 1) {
-        if (shouldReturnBeMyNeighbor(i)) {
+        if (shouldSubstituteNumber(i, '3')) {
             convertedNumArray.push("won't you be my neighbor?");
-        } else if (shouldReturnBoop(i)) {
+        } else if (shouldSubstituteNumber(i, '2')) {
             convertedNumArray.push("boop");
-        } else if (shouldReturnBeep(i)) {
+        } else if (shouldSubstituteNumber(i, '1')) {
             convertedNumArray.push("beep")
         } else {
             convertedNumArray.push(i);
@@ -35,30 +35,12 @@ function numberToConvertedList(userNum) {
     return convertedNumArray;
 }
 
-function shouldReturnBeep(userNum) {
+function shouldSubstituteNumber(userNum, targetNum) {
     let userNumToString = userNum.toString();
     for (let i = 0; i < userNumToString.length; i++) {
-        if (userNumToString[i] === '1') {
+        if (userNumToString[i] === targetNum) {
             return true;
         }
     }
     return false;
-}
-
-function shouldReturnBoop(userNum) {
-    let userNumToString2 = userNum.toString();
-    for (let i = 0; i < userNumToString2.length; i++) {
-        if (userNumToString2[i] === '2') {
-            return true;
-        }
-    }
-}
-
-function shouldReturnBeMyNeighbor(userNum) {
-    let userNumToString3 = userNum.toString();
-    for (let i = 0; i < userNumToString3.length; i++) {
-        if (userNumToString3[i] === '3') {
-            return true;
-        }
-    }
 }
