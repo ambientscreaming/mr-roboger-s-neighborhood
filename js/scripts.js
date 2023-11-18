@@ -25,6 +25,8 @@ function numberToConvertedList(userNum) {
             convertedNumArray.push("beep");
         } else if (shouldReturnBoop(i)) {
             convertedNumArray.push("boop");
+        } else if (shouldReturnBeMyNeighbor(i)) {
+            convertedNumArray.push("won't you be my neighbor?")
         } else {
             convertedNumArray.push(i);
         }
@@ -47,6 +49,15 @@ function shouldReturnBoop(userNum) {
     let userNumToString2 = userNum.toString();
     for (let i = 0; i < userNumToString2.length; i++) {
         if (userNumToString2[i] === '2') {
+            return true;
+        }
+    }
+}
+
+function shouldReturnBeMyNeighbor(userNum) {
+    let userNumToString3 = userNum.toString();
+    for (let i = 0; i < userNumToString3.length; i++) {
+        if (userNumToString3[i] === '3') {
             return true;
         }
     }
