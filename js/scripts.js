@@ -1,4 +1,4 @@
-// USER LOGIC
+// USER INTERFACE LOGIC
 
 document.addEventListener("DOMContentLoaded", (e) => {
     const mrRobogersForm = document.getElementById("mrRobogersForm");
