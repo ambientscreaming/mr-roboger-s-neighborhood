@@ -11,12 +11,28 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
         document.getElementById("mrRobogersForm").reset();
 
+        animateTrolley();
 
     });
 
 });
 
 // BUSINESS LOGIC 
+
+function animateTrolley() {
+    const trolley = document.getElementById('trolley');
+    const screenWidth = window.innerWidth;
+    const trolleyWidth = trolley.clientWidth;
+    const endPosition = screenWidth - trolleyWidth;
+
+    trolley.style.transform = `translateX(${endPosition}px)`;
+
+
+    setTimeout(() => {
+        trolley.style.transform = 'translateX(0)';
+    }, 5000);
+}
+
 
 function numberToConvertedList(userNum) {
     const convertedNumArray = [];
@@ -44,4 +60,3 @@ function shouldSubstituteNumber(userNum, targetNum) {
     }
     return false;
 }
-

@@ -49,7 +49,14 @@ h1 {
     padding-top: 50px;
 }
 
-.img {
-    width: 100%;
-    height: auto
+.trolley {
+    height: 250px;
+    width: auto;
+}
+
+#trolley {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: transform 5s linear;
 }
