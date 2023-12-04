@@ -1,6 +1,6 @@
 // USER INTERFACE LOGIC
 
-document.addEventListener("DOMContentLoaded", (e) => {
+document.addEventListener("DOMContentLoaded", () => {
     const mrRobogersForm = document.getElementById("mrRobogersForm");
     mrRobogersForm.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -42,7 +42,7 @@ function numberToConvertedList(userNum) {
         } else if (shouldSubstituteNumber(i, '2')) {
             convertedNumArray.push("boop");
         } else if (shouldSubstituteNumber(i, '1')) {
-            convertedNumArray.push("beep")
+            convertedNumArray.push("beep");
         } else {
             convertedNumArray.push(i);
         }
